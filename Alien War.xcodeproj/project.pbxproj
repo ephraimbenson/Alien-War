@@ -1,0 +1,539 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		62D77FE719F22168007AF985 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D77FE619F22168007AF985 /* AppDelegate.swift */; };
+		62D77FE919F22168007AF985 /* GameStartScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 62D77FE819F22168007AF985 /* GameStartScene.sks */; };
+		62D77FEB19F22168007AF985 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D77FEA19F22168007AF985 /* GameScene.swift */; };
+		62D77FED19F22168007AF985 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D77FEC19F22168007AF985 /* GameViewController.swift */; };
+		62D77FF019F22168007AF985 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62D77FEE19F22168007AF985 /* Main.storyboard */; };
+		62D77FF219F22168007AF985 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62D77FF119F22168007AF985 /* Images.xcassets */; };
+		62D77FF519F22168007AF985 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 62D77FF319F22168007AF985 /* LaunchScreen.xib */; };
+		62D7800119F22168007AF985 /* Alien_WarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D7800019F22168007AF985 /* Alien_WarTests.swift */; };
+		62D7800B19F2219C007AF985 /* GameStartScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D7800A19F2219C007AF985 /* GameStartScene.swift */; };
+		62D7800E19F221C3007AF985 /* GameOverScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D7800C19F221C3007AF985 /* GameOverScene.swift */; };
+		62D7800F19F221C3007AF985 /* HighScore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D7800D19F221C3007AF985 /* HighScore.swift */; };
+		62D7801219F221EF007AF985 /* StandardAlien.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D7801019F221EF007AF985 /* StandardAlien.swift */; };
+		62D7801319F221EF007AF985 /* ZigZagAlien.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D7801119F221EF007AF985 /* ZigZagAlien.swift */; };
+		62D7802619F2244F007AF985 /* alienGreen.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 62D7801619F2244F007AF985 /* alienGreen.atlas */; };
+		62D7802719F2244F007AF985 /* alienPartsGreen.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 62D7801719F2244F007AF985 /* alienPartsGreen.atlas */; };
+		62D7802819F2244F007AF985 /* alienPartsRed.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 62D7801819F2244F007AF985 /* alienPartsRed.atlas */; };
+		62D7802919F2244F007AF985 /* alienRed.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 62D7801919F2244F007AF985 /* alienRed.atlas */; };
+		62D7802A19F2244F007AF985 /* partExplosion.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 62D7801A19F2244F007AF985 /* partExplosion.atlas */; };
+		62D7802B19F2244F007AF985 /* pauseButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 62D7801B19F2244F007AF985 /* pauseButton.png */; };
+		62D7802C19F2244F007AF985 /* restartButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 62D7801C19F2244F007AF985 /* restartButton.png */; };
+		62D7802D19F2244F007AF985 /* shipExplosion.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 62D7801D19F2244F007AF985 /* shipExplosion.atlas */; };
+		62D7802E19F2244F007AF985 /* spaceship.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 62D7801E19F2244F007AF985 /* spaceship.atlas */; };
+		62D7802F19F2244F007AF985 /* background-music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 62D7802019F2244F007AF985 /* background-music.mp3 */; };
+		62D7803019F2244F007AF985 /* bullet.wav in Resources */ = {isa = PBXBuildFile; fileRef = 62D7802119F2244F007AF985 /* bullet.wav */; };
+		62D7803119F2244F007AF985 /* explosion.wav in Resources */ = {isa = PBXBuildFile; fileRef = 62D7802219F2244F007AF985 /* explosion.wav */; };
+		62D7803219F2244F007AF985 /* hit.wav in Resources */ = {isa = PBXBuildFile; fileRef = 62D7802319F2244F007AF985 /* hit.wav */; };
+		62D7803319F2244F007AF985 /* hitPart.wav in Resources */ = {isa = PBXBuildFile; fileRef = 62D7802419F2244F007AF985 /* hitPart.wav */; };
+		62D7803419F2244F007AF985 /* select.wav in Resources */ = {isa = PBXBuildFile; fileRef = 62D7802519F2244F007AF985 /* select.wav */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		62D77FFB19F22168007AF985 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 62D77FD919F22168007AF985 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 62D77FE019F22168007AF985;
+			remoteInfo = "Alien War";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		62D77FE119F22168007AF985 /* Alien War.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Alien War.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		62D77FE519F22168007AF985 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		62D77FE619F22168007AF985 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		62D77FE819F22168007AF985 /* GameStartScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameStartScene.sks; sourceTree = "<group>"; };
+		62D77FEA19F22168007AF985 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		62D77FEC19F22168007AF985 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		62D77FEF19F22168007AF985 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		62D77FF119F22168007AF985 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		62D77FF419F22168007AF985 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		62D77FFA19F22168007AF985 /* Alien WarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Alien WarTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		62D77FFF19F22168007AF985 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		62D7800019F22168007AF985 /* Alien_WarTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alien_WarTests.swift; sourceTree = "<group>"; };
+		62D7800A19F2219C007AF985 /* GameStartScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameStartScene.swift; sourceTree = "<group>"; };
+		62D7800C19F221C3007AF985 /* GameOverScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameOverScene.swift; sourceTree = "<group>"; };
+		62D7800D19F221C3007AF985 /* HighScore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HighScore.swift; sourceTree = "<group>"; };
+		62D7801019F221EF007AF985 /* StandardAlien.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StandardAlien.swift; sourceTree = "<group>"; };
+		62D7801119F221EF007AF985 /* ZigZagAlien.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZigZagAlien.swift; sourceTree = "<group>"; };
+		62D7801619F2244F007AF985 /* alienGreen.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = alienGreen.atlas; sourceTree = "<group>"; };
+		62D7801719F2244F007AF985 /* alienPartsGreen.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = alienPartsGreen.atlas; sourceTree = "<group>"; };
+		62D7801819F2244F007AF985 /* alienPartsRed.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = alienPartsRed.atlas; sourceTree = "<group>"; };
+		62D7801919F2244F007AF985 /* alienRed.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = alienRed.atlas; sourceTree = "<group>"; };
+		62D7801A19F2244F007AF985 /* partExplosion.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = partExplosion.atlas; sourceTree = "<group>"; };
+		62D7801B19F2244F007AF985 /* pauseButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pauseButton.png; sourceTree = "<group>"; };
+		62D7801C19F2244F007AF985 /* restartButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = restartButton.png; sourceTree = "<group>"; };
+		62D7801D19F2244F007AF985 /* shipExplosion.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = shipExplosion.atlas; sourceTree = "<group>"; };
+		62D7801E19F2244F007AF985 /* spaceship.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = spaceship.atlas; sourceTree = "<group>"; };
+		62D7802019F2244F007AF985 /* background-music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "background-music.mp3"; sourceTree = "<group>"; };
+		62D7802119F2244F007AF985 /* bullet.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = bullet.wav; sourceTree = "<group>"; };
+		62D7802219F2244F007AF985 /* explosion.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = explosion.wav; sourceTree = "<group>"; };
+		62D7802319F2244F007AF985 /* hit.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = hit.wav; sourceTree = "<group>"; };
+		62D7802419F2244F007AF985 /* hitPart.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = hitPart.wav; sourceTree = "<group>"; };
+		62D7802519F2244F007AF985 /* select.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = select.wav; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		62D77FDE19F22168007AF985 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		62D77FF719F22168007AF985 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		62D77FD819F22168007AF985 = {
+			isa = PBXGroup;
+			children = (
+				62D77FE319F22168007AF985 /* Alien War */,
+				62D77FFD19F22168007AF985 /* Alien WarTests */,
+				62D77FE219F22168007AF985 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		62D77FE219F22168007AF985 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				62D77FE119F22168007AF985 /* Alien War.app */,
+				62D77FFA19F22168007AF985 /* Alien WarTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		62D77FE319F22168007AF985 /* Alien War */ = {
+			isa = PBXGroup;
+			children = (
+				62D77FE619F22168007AF985 /* AppDelegate.swift */,
+				62D7800A19F2219C007AF985 /* GameStartScene.swift */,
+				62D77FE819F22168007AF985 /* GameStartScene.sks */,
+				62D77FEA19F22168007AF985 /* GameScene.swift */,
+				62D7800C19F221C3007AF985 /* GameOverScene.swift */,
+				62D7800D19F221C3007AF985 /* HighScore.swift */,
+				62D77FEC19F22168007AF985 /* GameViewController.swift */,
+				62D7801419F221FA007AF985 /* Sprites */,
+				62D77FEE19F22168007AF985 /* Main.storyboard */,
+				62D77FF119F22168007AF985 /* Images.xcassets */,
+				62D77FF319F22168007AF985 /* LaunchScreen.xib */,
+				62D7801519F2244F007AF985 /* Graphics */,
+				62D7801F19F2244F007AF985 /* Sounds */,
+				62D77FE419F22168007AF985 /* Supporting Files */,
+			);
+			path = "Alien War";
+			sourceTree = "<group>";
+		};
+		62D77FE419F22168007AF985 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				62D77FE519F22168007AF985 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		62D77FFD19F22168007AF985 /* Alien WarTests */ = {
+			isa = PBXGroup;
+			children = (
+				62D7800019F22168007AF985 /* Alien_WarTests.swift */,
+				62D77FFE19F22168007AF985 /* Supporting Files */,
+			);
+			path = "Alien WarTests";
+			sourceTree = "<group>";
+		};
+		62D77FFE19F22168007AF985 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				62D77FFF19F22168007AF985 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		62D7801419F221FA007AF985 /* Sprites */ = {
+			isa = PBXGroup;
+			children = (
+				62D7801019F221EF007AF985 /* StandardAlien.swift */,
+				62D7801119F221EF007AF985 /* ZigZagAlien.swift */,
+			);
+			name = Sprites;
+			sourceTree = "<group>";
+		};
+		62D7801519F2244F007AF985 /* Graphics */ = {
+			isa = PBXGroup;
+			children = (
+				62D7801619F2244F007AF985 /* alienGreen.atlas */,
+				62D7801719F2244F007AF985 /* alienPartsGreen.atlas */,
+				62D7801819F2244F007AF985 /* alienPartsRed.atlas */,
+				62D7801919F2244F007AF985 /* alienRed.atlas */,
+				62D7801A19F2244F007AF985 /* partExplosion.atlas */,
+				62D7801B19F2244F007AF985 /* pauseButton.png */,
+				62D7801C19F2244F007AF985 /* restartButton.png */,
+				62D7801D19F2244F007AF985 /* shipExplosion.atlas */,
+				62D7801E19F2244F007AF985 /* spaceship.atlas */,
+			);
+			path = Graphics;
+			sourceTree = "<group>";
+		};
+		62D7801F19F2244F007AF985 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				62D7802019F2244F007AF985 /* background-music.mp3 */,
+				62D7802119F2244F007AF985 /* bullet.wav */,
+				62D7802219F2244F007AF985 /* explosion.wav */,
+				62D7802319F2244F007AF985 /* hit.wav */,
+				62D7802419F2244F007AF985 /* hitPart.wav */,
+				62D7802519F2244F007AF985 /* select.wav */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		62D77FE019F22168007AF985 /* Alien War */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 62D7800419F22168007AF985 /* Build configuration list for PBXNativeTarget "Alien War" */;
+			buildPhases = (
+				62D77FDD19F22168007AF985 /* Sources */,
+				62D77FDE19F22168007AF985 /* Frameworks */,
+				62D77FDF19F22168007AF985 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Alien War";
+			productName = "Alien War";
+			productReference = 62D77FE119F22168007AF985 /* Alien War.app */;
+			productType = "com.apple.product-type.application";
+		};
+		62D77FF919F22168007AF985 /* Alien WarTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 62D7800719F22168007AF985 /* Build configuration list for PBXNativeTarget "Alien WarTests" */;
+			buildPhases = (
+				62D77FF619F22168007AF985 /* Sources */,
+				62D77FF719F22168007AF985 /* Frameworks */,
+				62D77FF819F22168007AF985 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				62D77FFC19F22168007AF985 /* PBXTargetDependency */,
+			);
+			name = "Alien WarTests";
+			productName = "Alien WarTests";
+			productReference = 62D77FFA19F22168007AF985 /* Alien WarTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		62D77FD919F22168007AF985 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = "Ephraim Benson";
+				TargetAttributes = {
+					62D77FE019F22168007AF985 = {
+						CreatedOnToolsVersion = 6.0.1;
+						DevelopmentTeam = DHKP65ZPBY;
+					};
+					62D77FF919F22168007AF985 = {
+						CreatedOnToolsVersion = 6.0.1;
+						TestTargetID = 62D77FE019F22168007AF985;
+					};
+				};
+			};
+			buildConfigurationList = 62D77FDC19F22168007AF985 /* Build configuration list for PBXProject "Alien War" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 62D77FD819F22168007AF985;
+			productRefGroup = 62D77FE219F22168007AF985 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				62D77FE019F22168007AF985 /* Alien War */,
+				62D77FF919F22168007AF985 /* Alien WarTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		62D77FDF19F22168007AF985 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				62D7802619F2244F007AF985 /* alienGreen.atlas in Resources */,
+				62D77FF519F22168007AF985 /* LaunchScreen.xib in Resources */,
+				62D7803019F2244F007AF985 /* bullet.wav in Resources */,
+				62D77FF219F22168007AF985 /* Images.xcassets in Resources */,
+				62D77FE919F22168007AF985 /* GameStartScene.sks in Resources */,
+				62D7802719F2244F007AF985 /* alienPartsGreen.atlas in Resources */,
+				62D7802919F2244F007AF985 /* alienRed.atlas in Resources */,
+				62D7802E19F2244F007AF985 /* spaceship.atlas in Resources */,
+				62D7802B19F2244F007AF985 /* pauseButton.png in Resources */,
+				62D7802C19F2244F007AF985 /* restartButton.png in Resources */,
+				62D7803119F2244F007AF985 /* explosion.wav in Resources */,
+				62D7803219F2244F007AF985 /* hit.wav in Resources */,
+				62D7802819F2244F007AF985 /* alienPartsRed.atlas in Resources */,
+				62D77FF019F22168007AF985 /* Main.storyboard in Resources */,
+				62D7802A19F2244F007AF985 /* partExplosion.atlas in Resources */,
+				62D7803319F2244F007AF985 /* hitPart.wav in Resources */,
+				62D7802F19F2244F007AF985 /* background-music.mp3 in Resources */,
+				62D7803419F2244F007AF985 /* select.wav in Resources */,
+				62D7802D19F2244F007AF985 /* shipExplosion.atlas in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		62D77FF819F22168007AF985 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		62D77FDD19F22168007AF985 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				62D7800E19F221C3007AF985 /* GameOverScene.swift in Sources */,
+				62D7801319F221EF007AF985 /* ZigZagAlien.swift in Sources */,
+				62D77FEB19F22168007AF985 /* GameScene.swift in Sources */,
+				62D7800B19F2219C007AF985 /* GameStartScene.swift in Sources */,
+				62D7801219F221EF007AF985 /* StandardAlien.swift in Sources */,
+				62D77FED19F22168007AF985 /* GameViewController.swift in Sources */,
+				62D7800F19F221C3007AF985 /* HighScore.swift in Sources */,
+				62D77FE719F22168007AF985 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		62D77FF619F22168007AF985 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				62D7800119F22168007AF985 /* Alien_WarTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		62D77FFC19F22168007AF985 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 62D77FE019F22168007AF985 /* Alien War */;
+			targetProxy = 62D77FFB19F22168007AF985 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		62D77FEE19F22168007AF985 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				62D77FEF19F22168007AF985 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		62D77FF319F22168007AF985 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				62D77FF419F22168007AF985 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		62D7800219F22168007AF985 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		62D7800319F22168007AF985 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		62D7800519F22168007AF985 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "Alien War/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		62D7800619F22168007AF985 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "Alien War/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		62D7800819F22168007AF985 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Alien WarTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Alien War.app/Alien War";
+			};
+			name = Debug;
+		};
+		62D7800919F22168007AF985 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Alien WarTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Alien War.app/Alien War";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		62D77FDC19F22168007AF985 /* Build configuration list for PBXProject "Alien War" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				62D7800219F22168007AF985 /* Debug */,
+				62D7800319F22168007AF985 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		62D7800419F22168007AF985 /* Build configuration list for PBXNativeTarget "Alien War" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				62D7800519F22168007AF985 /* Debug */,
+				62D7800619F22168007AF985 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		62D7800719F22168007AF985 /* Build configuration list for PBXNativeTarget "Alien WarTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				62D7800819F22168007AF985 /* Debug */,
+				62D7800919F22168007AF985 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 62D77FD919F22168007AF985 /* Project object */;
+}
