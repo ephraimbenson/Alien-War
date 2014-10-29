@@ -6,8 +6,6 @@
 //  Copyright (c) 2014 Ephraim Benson. All rights reserved.
 //
 
-// test
-
 import SpriteKit
 import Foundation
 import UIKit
@@ -95,7 +93,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         var n = 0
         for part in partArray {
             part.name = "AP"
-            /*switch n {
+            
+            /* This was abandoned in favor of applyImpulse:
+            
+            switch n {
             case 0:
                 part.name = "APArmL"
             case 1:
