@@ -94,7 +94,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         let partArray = [lArmSprite, rArmSprite, TLSprite, TRSprite, BLSprite, BRSprite]
         var n = 0
         for part in partArray {
-            switch n {
+            part.name = "AP"
+            /*switch n {
             case 0:
                 part.name = "APArmL"
             case 1:
@@ -109,7 +110,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 part.name = "APBR"
             default:
                 part.name = "alienPart"
-            }
+            }*/
             n += 1
             /*
             let destination = getAlienPartDestination(part)
@@ -347,13 +348,15 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         moveBackground()
         
         // Remove Off-screen alienPart nodes
-        // Alien and Bullet removal is handled by their SKActions
-        self.enumerateChildNodesWithName("alienPart") { node, stop in
+        // (Alien and Bullet removal is handled by their SKActions)
+        self.enumerateChildNodesWithName("AP") { node, stop in
             if node.position.x < 0 || node.position.x > self.size.width || node.position.y > self.size.height {
                 node.removeFromParent()
+                println("Node \(node) was removed.")
             }
         }
         
+        // Update Score
         scoreCounter.text = "Score: \(playerScore)"
         
         if shipShouldMove && self.paused == false {
