@@ -90,35 +90,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         rArmSprite.position = CGPointMake(TRSprite.position.x + 12, TRSprite.position.y + 5)
         
         let partArray = [lArmSprite, rArmSprite, TLSprite, TRSprite, BLSprite, BRSprite]
-        var n = 0
         for part in partArray {
-            part.name = "AP"
-            
-            /* This was abandoned in favor of applyImpulse:
-            
-            switch n {
-            case 0:
-                part.name = "APArmL"
-            case 1:
-                part.name = "APArmR"
-            case 2:
-                part.name = "APTL"
-            case 3:
-                part.name = "APTR"
-            case 4:
-                part.name = "APBL"
-            case 5:
-                part.name = "APBR"
-            default:
-                part.name = "alienPart"
-            }*/
-            n += 1
-            /*
-            let destination = getAlienPartDestination(part)
-            let dur = getAlienPartDuration(part, destination: destination)
-            part.runAction(SKAction.moveTo(destination, duration: dur), completion: { part.removeFromParent() })
-            */
-            
             part.setScale(2)
             
             part.physicsBody = SKPhysicsBody(rectangleOfSize: part.size)
@@ -129,7 +101,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         alien.removeFromParent()
         
-        //
         TLSprite.physicsBody?.applyImpulse(CGVectorMake(-randomVelocity, randomVelocity))
         TRSprite.physicsBody?.applyImpulse(CGVectorMake(randomVelocity, randomVelocity))
         BLSprite.physicsBody?.applyImpulse(CGVectorMake(-randomVelocity, randomVelocityLow))
@@ -211,34 +182,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 newStar.removeFromParent()
             })
         }
-    }
-    
-    func getAlienPartDestination(alienpart: SKSpriteNode) -> CGPoint {
-        var coordX = CGFloat()
-        var coordY = CGFloat()
-        
-        // MARK: BAD_ACCESS error
-        // Issue with accessing alien parts
-        if alienpart.name? != nil {
-            println(alienpart.name!)
-            var charCount = alienpart.name!.utf16Count
-            var alienLocation = alienpart.name?.substringFromIndex(advance(alienpart.name!.startIndex, charCount - 1))
-            
-            if alienLocation == "L" {
-                coordX = CGFloat(UInt32(alienpart.position.x) - arc4random_uniform(alienPartMaxDisplacement))
-            } else if alienLocation == "R" {
-                coordX = CGFloat(UInt32(alienpart.position.x) + arc4random_uniform(alienPartMaxDisplacement))
-            }
-        }
-        coordY = self.size.height
-        return CGPointMake(coordX, coordY)
-    }
-    
-    func getAlienPartDuration(alienpart: SKSpriteNode, destination: CGPoint) -> NSTimeInterval {
-        let dx = pow(destination.x - alienpart.position.x, 2)
-        let dy = pow(destination.y - alienpart.position.y, 2)
-        let duration = Double(sqrt(dx + dy))
-        return duration / alienPartPPS
     }
     
     // MARK: - Event Handling
