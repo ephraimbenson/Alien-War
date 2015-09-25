@@ -64,7 +64,7 @@ class GameOverScene: SKScene {
     }
 	
 	override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
-		let touch = touches.anyObject() as UITouch
+		let touch = touches.anyObject() as! UITouch
 		let nodes = self.nodesAtPoint(touch.locationInNode(self))
 		for node in nodes {
 			if node.name? == "RestartText" || node.name? == "RestartButton" {
